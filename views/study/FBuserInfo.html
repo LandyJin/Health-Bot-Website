@@ -1,0 +1,61 @@
+<script>
+    var accountAccessToken;
+    //PAGE ID:  1920099871651923
+    //Short Lived Access Token: EAACEdEose0cBAO5dp9JzfQPZAw3wL73kVGGZAnLDiRms0gyVwMzfBASpLr9QmE1ifwZBUHsDI8oaSGZAFlEzyrHDiNhtSqTd3gYkjADwyu3xbZBLH6r3YKACW7KhHoFpHASztNxdxDNqbNUxJZAltkAIZBoXgyKR1EjOUKf8f8XXgfXTZB9SMEhiRvnMjJXipU3rv6dmOpqjsAZDZD
+    //https://graph.facebook.com/v2.10/oauth/access_token?grant_type=fb_exchange_token&client_id=899584986866581&client_secret=dd503569702065138c0891beaba6518e&fb_exchange_token=EAACEdEose0cBAO5dp9JzfQPZAw3wL73kVGGZAnLDiRms0gyVwMzfBASpLr9QmE1ifwZBUHsDI8oaSGZAFlEzyrHDiNhtSqTd3gYkjADwyu3xbZBLH6r3YKACW7KhHoFpHASztNxdxDNqbNUxJZAltkAIZBoXgyKR1EjOUKf8f8XXgfXTZB9SMEhiRvnMjJXipU3rv6dmOpqjsAZDZD
+    //Long-Lived Access Token: EAAHrM3fVErwBAOrDbYTmOR82tArTUkzC8AI3rDW3ZB6O8fQSSFcTXyC5B3j8sAiNHlBzIlY5hf6I8YhWJGIEx1nZB5ZCaT73W4ZBsgoafEiYX4mdJKXHefy1zKUVTsUent4fj1ZBoWYlKl9rhKjGPfRywdMZAGxuKarWCwZAw2OeAZDZD
+    //User ID: https://graph.facebook.com/v2.10/me?access_token=EAAHrM3fVErwBAOrDbYTmOR82tArTUkzC8AI3rDW3ZB6O8fQSSFcTXyC5B3j8sAiNHlBzIlY5hf6I8YhWJGIEx1nZB5ZCaT73W4ZBsgoafEiYX4mdJKXHefy1zKUVTsUent4fj1ZBoWYlKl9rhKjGPfRywdMZAGxuKarWCwZAw2OeAZDZD
+    //https://graph.facebook.com/v2.10/391654144618772?fields=access_token&access_token=EAAHrM3fVErwBAOrDbYTmOR82tArTUkzC8AI3rDW3ZB6O8fQSSFcTXyC5B3j8sAiNHlBzIlY5hf6I8YhWJGIEx1nZB5ZCaT73W4ZBsgoafEiYX4mdJKXHefy1zKUVTsUent4fj1ZBoWYlKl9rhKjGPfRywdMZAGxuKarWCwZAw2OeAZDZD
+    //Permanent Page Access Token: EAAHrM3fVErwBAObzZBypIwcdgag7wZBD0Ek2bZCS2rbUvRr59efj4zveOrU0fkIxRyDjxlrcDWIDdUXtUrKhhBMWDiRMJWG1ZCcrjwMPUQjdAhSQN6x5wWBFyBPJamsbsIIkxbsJUl0wcpP1ZC2cNhBIUK4xQnbRrKcNb8ZCd4FQZDZD
+    window.fbAsyncInit = function() {
+        FB.init({
+        appId      : '899584986866581',
+        autoLogAppEvents: true,
+        status: true,
+        xfbml      : true,
+        version    : 'v2.11'
+        });
+        FB.AppEvents.logPageView();
+
+        
+        FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+            FB.getLoginStatus(function(response) {
+              FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(30).height(30)'}, function(response) {
+                document.getElementById('fbUserInfo').innerHTML = "Hi, " + response.name + "  " + "<img src='" + response.picture.data.url + "'>";
+              });
+            });
+        });
+
+    };
+    
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11&appId=899584986866581";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        function statusChangeCallback(response) {
+        if (response.status === 'connected') {
+        console.log('logged in');
+        accountAccessToken = response.authResponse.accessToken;
+        console.log(accountAccessToken);
+        } else {
+        console.log ('Not logged in');
+        }
+        };
+    
+    //Call FB User Infomation File
+    //$(function(){
+      //$("#fbUserInfo").load("FBuserInfo.html");
+    //});
+</script>
+
+<div id="fbUserInfo"></div>
+
+<!--   Core JS Files   -->
+<script src="../../../js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script src="../../../js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../../../js/material.min.js" type="text/javascript"></script>

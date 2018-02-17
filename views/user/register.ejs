@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+  <div class="container">
+    <section class="register">
+      <h1>Register on HealthBot</h1>
+      <form method="post" action="signup" enctype="multipart/form-data">
+      <%if(error) {%>
+        <div class="reg_section personal_info">
+        <h3>Please enter the information properly</h3>
+        </div>
+      <% } %>
+
+      <div class="reg_section personal_info">
+      <h3>Your Personal Information</h3>
+      <input type="text" name="Fname" value="" placeholder="Your First name" required/>
+      <input type="text" name="username" value="" placeholder="Your Desired Username" required/>
+      <input type="text" name="email" value="" placeholder="Your E-mail Address" required/>
+      <input type="date" name="user_dob" value="" placeholder="Date of Birth" required/>
+      <textarea placeholder="Goals to achieve" name='user_goals' required/></textarea>
+      </div>
+      <div class="reg_section password">
+      <h3>Your Password</h3>
+      <input type="password" name="password" value="" placeholder="Your Password" required/>
+      <input type="password" name="confirm" value="" placeholder="Confirm Password" required/>
+      </div>
+      <div class="reg_section password" >
+      <h3>Upload Image</h3>
+      <input type="button" id="button" value="Choose Image"/>
+      <input type="file"  style="opacity:0; position:relative; left:-40px;top: -26px;" name='user_pic'  onchange="javascript: document.getElementById ('fileName') . value = this.value"/>
+      </div>
+      <div class="reg_section password">
+      <h3>Signup as a</h3>
+      <select name='user_type'>
+          <option value='1'>Practioner</option>
+          <option value='2'>User</option>
+      </select>
+      </div>
+      <p class="submit"><input type="submit" name="commit" value="Sign Up"></p>
+      </form>
+    </section>
+  </div>
+</body>
+</html>

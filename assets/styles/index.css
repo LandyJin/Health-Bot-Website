@@ -1,0 +1,252 @@
+.studyStyle{
+    margin: 20px;
+}
+
+.study{
+    padding: 50px 20px; 
+    color: rgb(71, 99, 100);
+    background-color: rgb(223, 243, 242);
+    background: -webkit-linear-gradient(left top, rgb(243, 243, 243), rgb(208, 235, 234)); /* For Safari 5.1 to 6.0 */
+    box-shadow:  0 0 20px rgb(194, 207, 207), 0 0 5px rgb(148, 179, 177);
+}
+
+.flagWrapper{
+    position: absolute;
+    margin-left: calc(100% - 110px);
+    margin-top: -20px;
+    border-style: solid;
+    border-radius: 5%;
+    width: 80px;
+    height: 40px;
+    z-index: 10;
+    background: rgb(230, 2, 108);
+    border-color: rgb(230, 2, 108);
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.flagWrapperTop {
+    position: absolute;
+    right: -22px;
+    top: -3px;
+    content: ' ';
+    display: block;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-top: 22px solid rgb(230, 2, 108);
+}
+
+.flagWrapperDown {
+    position: absolute;
+    right: -23px;
+    top: 12px;
+    content: ' ';
+    display: block;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 25px solid rgb(230, 2, 108);
+}
+
+.studyDuaration {
+    position: absolute;
+    margin-left: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    font-family: 'Archivo Black';
+}
+
+.studyDuaration span{
+    font-size: 15px;
+    font-family: 'Libre Franklin';
+}
+
+.studyDurYear{
+    display: none;
+}
+
+.profile img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.profile span {
+    font-family: 'Magra';
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.media {
+    padding: 8px 0;
+}
+
+.study h1{
+    font-family: 'Coda Caption';
+    color: rgb(71, 99, 100);
+}
+
+.study h3{
+    font-family: 'Magra';
+}
+
+.study h5{
+    color: rgb(114, 114, 114);
+}
+
+.modelStyle{
+    margin: 20px 10px;
+    color: rgb(0, 0, 41);
+}
+
+.models{
+    margin: 15px 0;
+}
+
+.studyDescription{
+    font-size: 15px;
+    padding: 20px 0;
+}
+
+.studyDuarationDetail{
+    color: rgb(163, 163, 163);
+    padding-bottom: 10px;
+}
+
+.studyFeedback{
+    width: 100%;
+    border-top: 1px solid rgb(216, 216, 216);
+    padding-bottom: 5px;
+}
+
+.like {
+    float: left;
+}
+
+.like i{
+    padding: 10px 0 0 10px;
+    color: rgb(61, 61, 61);
+    font-size: 25px;
+}
+
+.like span{
+    padding: 0 10px 5px 0;
+    font-size: 18px;
+}
+
+.views{
+    padding: 13px 10px 0 0;
+    float: right;
+    color: grey;
+}
+
+.views span{
+    padding: 0 0 0 3px;
+}
+
+.model{
+    padding: 20px;
+    background-color: rgb(241, 239, 239);
+    box-shadow: 3px 5px 10px #a7a7a7;
+}
+
+.img-responsive-parent {
+    margin: -20px;
+    margin-bottom: 20px;
+    height: 223px;
+}
+
+.model h1{
+    padding-bottom: 5px;
+    font-family: 'Cantora One';
+}
+
+.boundary{
+    width: 100%;
+    border-top: 1px solid rgb(197, 197, 197);
+    padding-bottom: 5px;
+}
+
+.modelDuarationDetail{
+    color: rgb(131, 131, 131);
+    padding: 10px 0 0 0;
+}
+
+.modelDuarationDetail i{
+    color: black;
+    padding-right: 2px;
+}
+
+.modelViews{
+    color: rgb(131, 131, 131);
+    padding: 5px 0 10px 0;
+}
+
+.modelViews i{
+    color: black;
+    padding-right: 2px;
+}
+
+.modelDescriptionDetail {
+    font-size: 15px;
+    padding: 5px 0 10px 0;
+}
+
+.learnMore{
+    margin: 10px 0; 
+}
+
+.learnMore span{
+    background-color: rgb(230, 2, 108);
+    border-radius: 5%;
+    box-shadow: 5px 3px 15px #888888;
+    color: white;
+    font-family: 'Magra';
+    font-size: 15px;
+    padding: 8px 16px;
+}
+
+.modelStyle:hover .learnMore span{
+    box-shadow: inset 0 50px 0 0 rgb(253, 253, 253);
+    color: rgb(230, 2, 108);
+    border: 2px solid rgb(230, 2, 108);
+    text-decoration: none;
+}
+
+.modelStyle:hover .img-responsive{
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+@media screen and (min-width: 992px) {
+    .flagWrapper{
+        margin-left: calc(100% - 210px);
+        width: 200px;
+        height: 45px; 
+    }
+
+    .flagWrapperTop {
+        border-left: 28px solid transparent;
+        border-right: 28px solid transparent;
+        border-top: 28px solid rgb(230, 2, 108);
+    }
+    
+    .flagWrapperDown {
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 30px solid rgb(230, 2, 108);
+    }
+
+    .studyDuaration span{
+        padding-left: 6px;
+        font-size: 25px;
+        font-family: 'Archivo Black';
+    }
+
+    .studyDurYear{
+        display: inline-block;
+    }
+
+    .studyDuarationDetail{
+        display: none;
+    }
+}    
